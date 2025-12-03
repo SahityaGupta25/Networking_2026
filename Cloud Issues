@@ -1,0 +1,118 @@
+✅ Major Issues Cloud Support Engineers Face (Day-to-Day)
+1. Networking & Connectivity Issues
+
+Problem: Customer’s EC2 instance (AWS) or VM (Azure) cannot connect to the internet or other services.
+Root Causes:
+
+Misconfigured security groups/firewall rules.
+Wrong routing tables or NAT gateway setup.
+DNS resolution failures.
+
+
+Resolution: Check VPC settings, security groups, route tables, DNS configs.
+
+
+2. Storage & Disk Issues
+
+Problem: Application crashes due to full disk or incorrect mount points.
+Root Causes:
+
+EBS volume not attached or mounted properly.
+Incorrect permissions on storage buckets (S3, Blob).
+
+
+Resolution: Resize volumes, remount disks, fix IAM policies.
+
+
+3. IAM & Permission Errors
+
+Problem: Customer cannot access resources or API calls fail.
+Root Causes:
+
+Misconfigured IAM roles/policies.
+Missing permissions for service accounts.
+
+
+Resolution: Review IAM policies, grant least privilege access.
+
+
+4. Service Outages or Latency
+
+Problem: Application is slow or unavailable.
+Root Causes:
+
+Regional service outage.
+Overloaded resources (CPU, memory).
+
+
+Resolution: Scale resources, check health dashboards, suggest failover strategies.
+
+
+5. Billing & Cost Optimization
+
+Problem: Customer complains about unexpected high bills.
+Root Causes:
+
+Unused resources running (EC2, RDS).
+Misconfigured autoscaling.
+
+
+Resolution: Analyze cost reports, recommend reserved instances or autoscaling policies.
+
+
+6. Deployment & CI/CD Issues
+
+Problem: Application deployment fails in cloud pipeline.
+Root Causes:
+
+Incorrect container image tags.
+Misconfigured Kubernetes networking.
+
+
+Resolution: Debug pipeline logs, fix YAML configs, check container registry.
+
+
+7. Backup & Disaster Recovery
+
+Problem: Data loss or backup failure.
+Root Causes:
+
+Snapshot not scheduled.
+Incorrect replication settings.
+
+
+Resolution: Configure automated backups, enable cross-region replication.
+
+
+8. SSL/TLS Certificate Issues
+
+Problem: Website shows “Not Secure” or HTTPS fails.
+Root Causes:
+
+Expired SSL certificate.
+Misconfigured load balancer.
+
+
+Resolution: Renew certificates, update LB settings.
+
+
+9. API Rate Limits & Throttling
+
+Problem: Customer’s API calls fail intermittently.
+Root Causes:
+
+Exceeded API rate limits.
+
+
+Resolution: Suggest exponential backoff, request quota increase.
+
+
+10. Monitoring & Alerts
+
+Problem: Customer receives too many alerts or none at all.
+Root Causes:
+
+Misconfigured CloudWatch/Log Analytics.
+
+
+Resolution: Tune alert thresholds, set up dashboards.
