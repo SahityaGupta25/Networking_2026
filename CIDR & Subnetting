@@ -1,0 +1,87 @@
+✅ What is CIDR? (Classless Inter-Domain Routing)
+CIDR stands for Classless Inter-Domain Routing. It is a method for allocating IP addresses and routing that replaces the old "classful" system (Class A, B, C).
+
+Instead of fixed classes, CIDR uses a flexible notation:
+IP address + slash + number of network bits.
+
+Example:
+192.168.1.0/24
+- "192.168.1.0" is the network address.
+- "/24" means the first 24 bits are the network portion.
+
+
+✅ Why CIDR is Important
+- Efficient use of IP addresses.
+- Allows subnetting (breaking networks into smaller networks).
+- Used in AWS VPC, Kubernetes clusters, and routing tables.
+
+
+✅ CIDR Notation Explained
+CIDR notation: IP address / prefix length
+Prefix length = number of bits for the network portion.
+
+Example:
+10.0.0.0/16
+- Network bits: 16
+- Host bits: 32 - 16 = 16
+- Total IPs: 2^16 = 65,536 addresses
+
+
+✅ Subnetting Explained
+Subnetting = dividing a large network into smaller sub-networks.
+
+Example:
+Network: 192.168.1.0/24
+- /24 means 256 IP addresses (2^8).
+- Usable IPs: 256 - 2 = 254 (subtract network & broadcast).
+
+If we subnet /24 into /26:
+- /26 means 64 IP addresses per subnet (2^6).
+- Usable IPs per subnet: 62.
+- Number of subnets: 4 (because 256 / 64 = 4).
+
+
+✅ Relation Between CIDR and Subnetting
+- CIDR defines the network size using prefix length.
+- Subnetting uses CIDR to break networks into smaller chunks.
+
+
+✅ IPv4 and IPv6 with CIDR & Subnetting
+IPv4:
+- 32-bit address space.
+- CIDR ranges: /0 to /32.
+- Example: 192.168.0.0/24 (256 IPs).
+
+IPv6:
+- 128-bit address space.
+- CIDR ranges: /0 to /128.
+- Example: 2001:db8::/64 (18 quintillion IPs per subnet).
+- IPv6 subnetting is simpler because /64 is standard for hosts.
+
+
+✅ How to Calculate Subnets
+Formula:
+Number of IPs = 2^(Host bits)
+Host bits = Total bits - Network bits
+
+Example:
+Network: 10.0.0.0/20
+- Network bits: 20
+- Host bits: 32 - 20 = 12
+- IPs: 2^12 = 4096
+- Usable IPs: 4094
+
+
+✅ Common CIDR Blocks
+/8   = 16,777,216 IPs
+/16  = 65,536 IPs
+/24  = 256 IPs
+/32  = 1 IP (host)
+
+
+✅ Interview Questions
+1. What is CIDR and why is it used?
+2. How many IPs in /24 subnet?
+3. Explain subnetting with an example.
+4. How does CIDR work in IPv6?
+5. Why is /64 common in IPv6?
