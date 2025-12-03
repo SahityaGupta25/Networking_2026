@@ -1,0 +1,87 @@
+✅ What is the TCP/IP Model?
+The TCP/IP model is the real-world implementation of networking. It’s simpler than OSI and has 4 layers:
+
+Application Layer
+Transport Layer
+Internet Layer
+Network Access Layer (also called Link Layer)
+
+
+✅ Friendly Example: Sending a WhatsApp Message
+Imagine you’re sending a WhatsApp message to your friend. Let’s see how each layer works:
+
+1. Application Layer
+
+What happens?
+
+This is where your app (WhatsApp) operates.
+Protocols: HTTP, HTTPS, DNS, SMTP, FTP.
+
+
+In our example:
+
+You type “Hello!” in WhatsApp and hit send.
+WhatsApp uses HTTP/HTTPS to communicate with its servers.
+
+
+Key Role: Converts your message into data that can be transmitted.
+
+
+2. Transport Layer
+
+What happens?
+
+Ensures reliable delivery of data.
+Protocols: TCP (reliable), UDP (fast).
+
+
+In our example:
+
+WhatsApp uses TCP because messages must arrive in order.
+TCP breaks your “Hello!” into segments, adds sequence numbers.
+
+
+Key Role: Guarantees delivery and error checking.
+
+
+3. Internet Layer
+
+What happens?
+
+Handles addressing and routing.
+Protocol: IP (IPv4 or IPv6).
+
+
+In our example:
+
+Adds your phone’s IP and WhatsApp server’s IP.
+Decides the best route to reach the server.
+
+
+Key Role: Makes sure data knows where to go.
+
+
+4. Network Access Layer (Link Layer)
+
+What happens?
+
+Deals with physical delivery (Ethernet, Wi-Fi).
+Adds MAC address and converts data into bits/signals.
+
+
+In our example:
+
+Your phone sends the data over Wi-Fi to your router.
+Router sends it to ISP → Internet → WhatsApp server.
+
+
+Key Role: Actually moves the data physically.
+
+
+✅ Sender vs Receiver
+
+Sender: Encapsulates data (adds headers at each layer).
+Receiver: Decapsulates data (removes headers layer by layer).
+So when your friend gets the message:
+
+WhatsApp server → Internet → Transport → Application → Shows “Hello!” in their app.
