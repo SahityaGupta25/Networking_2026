@@ -1,0 +1,104 @@
+✅ Difference Between IPv4 and IPv6
+Feature                | IPv4                                      | IPv6
+-----------------------------------------------------------------------------------------
+Address Size           | 32-bit (4 bytes)                          | 128-bit (16 bytes)
+Address Format         | Decimal, dotted notation (e.g., 192.168.1.1) | Hexadecimal, colon-separated (e.g., 2001:0db8:85a3::8a2e:0370:7334)
+Total Addresses        | ~4.3 billion (2^32)                       | ~340 undecillion (2^128)
+Header Complexity      | Simple, 12 fields                         | More complex, optimized for routing
+Security               | Optional (IPSec)                          | Mandatory (IPSec built-in)
+Configuration          | Manual or DHCP                            | Auto-configuration supported
+Broadcast              | Supported                                  | No broadcast (uses multicast)
+Fragmentation          | Done by sender & routers                  | Done only by sender
+
+
+✅ Example IPv4 Address:
+192.168.1.10
+✅ Example IPv6 Address:
+2001:db8:85a3::8a2e:370:7334
+
+✅ Example of IPv4 Address
+192.168.1.10
+
+
+Binary: 11000000.10101000.00000001.00001010
+CIDR: /24 means subnet mask 255.255.255.0.
+
+✅ Example of IPv6 Address
+2001:0db8:85a3:0000:0000:8a2e:0370:7334
+
+
+Can be shortened:
+
+2001:db8:85a3::8a2e:370:7334
+
+
+Hexadecimal representation makes it compact.
+
+
+✅ Why IPv6 is Better than IPv4
+
+Address Space
+
+IPv4: 4.3 billion addresses → exhausted due to internet growth.
+IPv6: 340 undecillion addresses → practically unlimited.
+
+
+Performance
+
+Simplified header for faster routing.
+
+
+Security
+
+IPSec is mandatory in IPv6.
+
+
+Auto-configuration
+
+Devices can configure themselves without DHCP.
+
+
+No NAT needed
+
+Every device can have a unique global IP.
+
+
+Better multicast support
+
+Efficient for streaming and group communication.
+
+
+
+
+✅ How IP Addresses Are Calculated
+IPv4 Calculation
+
+IPv4 = 32 bits → 2³² = 4,294,967,296 addresses.
+Example:
+
+Network: 192.168.1.0/24
+/24 means first 24 bits are network, last 8 bits for hosts.
+Hosts = 2⁸ - 2 = 254 usable IPs (subtract network & broadcast).
+
+
+
+IPv6 Calculation
+
+IPv6 = 128 bits → 2¹²⁸ ≈ 340,282,366,920,938,463,463,374,607,431,768,211,456 addresses.
+Example:
+
+Network: 2001:db8::/64
+/64 means first 64 bits are network, last 64 bits for hosts.
+Hosts = 2⁶⁴ ≈ 18 quintillion addresses per subnet!
+
+
+
+
+✅ Interview Tips
+Common questions:
+
+Why do we need IPv6?
+Explain IPv4 vs IPv6 differences.
+How many IPs in /24 subnet?
+How does IPv6 handle auto-configuration?
+Does IPv6 use NAT? Why or why not?
